@@ -12,7 +12,7 @@ function fibonacci(term) {
 }
 
 /**
- * function to compute the energy equivqlent of the mass given
+ * function to compute the energy equivalent of the mass given
  * @param  {[float]} mass [the mass of a given substance in grams]
  * @return {[float]}      [energy equivalent of the mass in joules]
  */

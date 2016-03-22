@@ -18,5 +18,5 @@ function power(voltage, current) {
 
 }
 
-var power = power(10, 1.42)
+var power = power(240, 15)
 console.log(power(30));
