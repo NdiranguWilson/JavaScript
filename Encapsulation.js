@@ -10,7 +10,7 @@ function Area() {
 
   // private method
   function areaMethod() {
-    return length; // cannot read property this.width;
+    return length ; // cannot read property this.width;
   }
 
   // public method can access both

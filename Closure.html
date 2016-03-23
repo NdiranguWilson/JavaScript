@@ -1,0 +1,38 @@
+<!--
+/**
+ *
+ * Cytonn Technologies
+ * @author Ndirangu wilson <wndirangu@Cytonn.com>
+ */
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Closures</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    function power(voltage, current) {
+      /**
+       * [realPower returns the real power calculation with a given power factor]
+       * @param  {[float]} angle [power factor angle]
+       * @return {[float]}       [real power obtain from p=vicos(theta)]
+       */
+      return function realPower(angle) {
+
+        return (voltage * current * Math.cos(angle)).toFixed(4) + " Watts";
+
+      };
+
+    }
+
+    var power = power(240, 15);
+    alert(power(30));
+  </script>
+</body>
+
+</html>

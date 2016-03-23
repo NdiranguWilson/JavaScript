@@ -1,0 +1,49 @@
+<!---
+/** * * Cytonn Technologies * @author Ndirangu wilson
+<wndirangu@Cytonn.com>
+  */
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Encapsulation</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    function Area() {
+      var length = 20; // private property
+      this.width = 10; // public property
+
+      // private method
+      function areaMethod() {
+        return length ; // cannot read property this.width;
+      }
+
+      // public method can access both
+      // public and private members
+      this.methodTwo = function() {
+        return this.width + ", " + areaMethod();
+      };
+      // public method sets private member
+      this.methodFour = function(val) {
+        length = val;
+        return length
+      }
+
+      this.methodThree = areaMethod; // make meth1 visible via methodThree
+    }
+
+    var area = new Area(); // create new Area object
+
+    var result1 = area.methodTwo();
+    var result2 = area.methodThree();
+
+    var result3 = area.length; // undefined: length is private
+    // var result4 = area.meth1(); 	// erroneous: meth1() is private
+    alert(result1);
+
+    </script>
+
+  </body>
+</html>

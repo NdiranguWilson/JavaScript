@@ -4,16 +4,16 @@
  *
  */
 
- var Circle = function(radius) {
-  this.radius = radius;
+ var Person = function(age) {
+  this.years = age;
 
 }
 
-//augment Circle's default prototype property thereby augmenting the prototype of each generated instance
-Circle.prototype.area = function() {
-  return Math.PI * this.radius * this.radius;
+//augment Person's default prototype property thereby augmenting the prototype of each generated instance
+Person.prototype.age = function() {
+  return this.years;
 }
 
-//creating an  instance of a circle leveranging  common prototype
-var a = new Circle(3);
- console.log(a.area().toFixed(2));
+//creating an  instance of a Person leveranging  common prototype
+var a = new Person(3);
+ console.log(a.age());
